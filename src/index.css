@@ -1,13 +1,25 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-color: #282a36;
+  font-family: "Vazir","tahoma","ubuntu";
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="number"]::placeholder{
+  color: #f8f8f2;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"]{
+  color: #f8f8f2;
+  background-color: #44475a;
+  border-color: #bd93f9;
+}
+.form-control{
+  color: #f8f8f2;
+  background-color: #44475a;
+  border-color: #bd93f9;
 }

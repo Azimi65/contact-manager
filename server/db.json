@@ -1,0 +1,35 @@
+{
+  "contacts": [
+    {
+      "fullname": "لیلا اسدی",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgvGbWul16WxRk8M_17E3s17XWt6yY0DS2CK8dy1DwAA&s",
+      "mobile": "09125523739",
+      "email": "taheri@gmail.com",
+      "job": "مدرس",
+      "group": "4",
+      "id": 7
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "name": "دوست"
+    },
+    {
+      "id": "2",
+      "name": "همکار"
+    },
+    {
+      "id": "3",
+      "name": "آشنا"
+    },
+    {
+      "id": "4",
+      "name": "هم کلاسی"
+    },
+    {
+      "id": "5",
+      "name": "همسایه"
+    }
+  ]
+}
