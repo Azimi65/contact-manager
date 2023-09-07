@@ -1,8 +1,10 @@
+import { useContext } from "react";
 import Spinner from "../Spinner";
 import {GREEN,PURPLE,CYAN} from '../../helpers/colors';
-
+import { contactContext } from "../../context/contactContext";
 import { Link } from "react-router-dom";
-const AddContact = ({loading,setContactInfo,contacts,createContactForm}) => {
+const AddContact = () => {
+    const {loading,onContactChange,contacts,createContactForm} =useContext(contactContext);
     console.log(contacts.fullname)
     return ( 
        <>
@@ -22,22 +24,22 @@ const AddContact = ({loading,setContactInfo,contacts,createContactForm}) => {
                     <div className="">
                         <form onSubmit={createContactForm}>
                             <div className="mt-3">
-                                <input type="text" name="fullname" className="form-control" placeholder="نام و نام خانوادگی" required={true} onChange={setContactInfo} value={contacts.fullname}/>
+                                <input type="text" name="fullname" className="form-control" placeholder="نام و نام خانوادگی" required={true} onChange={onContactChange} value={contacts.fullname}/>
                             </div>
                             <div className="mt-3">
-                                <input type="text" name="photo" className="form-control" placeholder="آدرس تصویر" required={true} onChange={setContactInfo} value={contacts.photo}/>
+                                <input type="text" name="photo" className="form-control" placeholder="آدرس تصویر" required={true} onChange={onContactChange} value={contacts.photo}/>
                             </div>
                             <div className="mt-3">
-                                <input type="text" name="mobile" className="form-control" placeholder="شماره موبایل" required={true} onChange={setContactInfo} value={contacts.mobile}/>
+                                <input type="text" name="mobile" className="form-control" placeholder="شماره موبایل" required={true} onChange={onContactChange} value={contacts.mobile}/>
                             </div>
                             <div className="mt-3">
-                                <input type="text" name="email" className="form-control" placeholder="آدرس ایمیل" required={true} onChange={setContactInfo} value={contacts.email}/>
+                                <input type="text" name="email" className="form-control" placeholder="آدرس ایمیل" required={true} onChange={onContactChange} value={contacts.email}/>
                             </div>
                             <div className="mt-3">
-                                <input type="text" name="job" className="form-control" placeholder="شغل" required={true} onChange={setContactInfo} value={contacts.job}/>
+                                <input type="text" name="job" className="form-control" placeholder="شغل" required={true} onChange={onContactChange} value={contacts.job}/>
                             </div>
                             <div className="mt-3">
-                                <input type="text" name="group" className="form-control" placeholder="انتخاب گروه" onChange={setContactInfo} required={true} value={contacts.group}/>
+                                <input type="text" name="group" className="form-control" placeholder="انتخاب گروه" onChange={onContactChange} required={true} value={contacts.group}/>
                             </div>
                             <div className="mt-3 d-flex gap-3">
                                 <input type="submit" value="ساخت مخاطب"/>

@@ -1,7 +1,11 @@
+import { useContext } from "react";
+import { contactContext } from "../../context/contactContext";
 import { BACKGROUND, CURRENTLINE, CYAN, ORANGE, PINK, PURPLE, RED } from "../../helpers/colors";
 import {Spinner,Contact} from '../index';
 import {Link} from 'react-router-dom';
-const Contacts = ({contacts,loading,groups,confirmDelete}) => {
+import { deleteContact } from "../../services/contactService";
+const Contacts = () => {
+    const {contacts,loading,groups,deleteContact}=useContext(contactContext);
     console.log(contacts)
     return ( 
         <>
@@ -26,7 +30,7 @@ const Contacts = ({contacts,loading,groups,confirmDelete}) => {
                    
                     
                         <div className="col-6">
-                            <Contact key={c.id} id={c.id} contact={c} confirmDelete={()=>{confirmDelete(c.id,c.fullname)}}/> 
+                            <Contact key={c.id} id={c.id} contact={c} confirmDelete={()=>{deleteContact(c.id,c.fullname)}}/> 
                         </div>      
                    
                 )):(
